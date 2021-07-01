@@ -13,7 +13,7 @@ import Comments from "./Lesson3/Components/Comments/Comments";
 
 
 export default function App() {
-
+let appFn
 
     return (
         <Router>

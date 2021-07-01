@@ -1,7 +1,23 @@
+import {useState} from "react";
+import Post from "../Post/Post";
+
 export default function User({item}) {
+
+    let [posts, setPosts] = useState([])
+
+    const getPostsUser = () => {
+        fetch(`https://jsonplaceholder.typicode.com/users/${item.id}/posts`)
+            .then(value => value.json())
+            .then(value => setPosts(value));
+    }
+
     return (
         <div>
             {item.id} - {item.name}
+            <button onClick={getPostsUser}>Posts of Users</button>
+
+            {posts.map(value => <Post key={value.id} id={value.id} title={value.title}/>)}
+            <hr/>
         </div>
     );
 }
