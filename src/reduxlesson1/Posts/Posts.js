@@ -18,13 +18,23 @@ const Posts =  () => {
     useEffect(() => {
         fetchPosts()
     }, [])
-    return (
-        <div>
-            {posts.map(post => (
-                <li key={post.id}>{post.title} ==== {post.body}</li>
-            ))}
-        </div>
-    )
+    // return (
+    //     <div>
+    //         <button
+    //             onClick={(fetchPosts) => {
+    //                 dispatch2({type: 'Posts of Users'})
+    //             }}
+    //         >
+    //             Posts of Users
+    //
+    //             <ul>
+    //                 {posts.map(post => (
+    //                     <li key={post.id}>{post.title} ==== {post.body}</li>
+    //                 ))}
+    //             </ul>
+    //         </button>
+    //     </div>
+    // )
 }
 export default Posts
 
