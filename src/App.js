@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import {useDispatch, useSelector} from 'react-redux'
 import Comments from "./reduxlesson1/Comments/Comments";
+import Posts from "./reduxlesson1/Posts/Posts";
+import Post from "./reduxlesson1/Post/Post";
 
 const NestedChild = () => {
     // const dispatch = useDispatch();
@@ -59,8 +61,8 @@ function App() {
                     <Route exact={true} path={"/"}>
                         <Comments/>
                     </Route>
-                {/*<Route  path={"/Posts for Users"} component={}/>*/}
-
+                <Route  path={"/Posts for Users"} component={Post}/>
+                        <Posts/>
             </Switch>
             </ul>
             <NestedChild />

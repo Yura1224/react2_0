@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-
+import Post from "/src/reduxlesson1/Post/Post"
 
 
 
@@ -22,13 +22,11 @@ const Posts =  () => {
     }, [])
     return (
         <div>
-
-
-                    {posts.map(value => <Post/> (
-                        <li key={post.id}>{post.title} ==== {post.body}</li>
-                    ))}
-
-
+            {
+                fetchPosts.map(value => <Post
+                    key={value.id}
+                    post={value.id}/> )
+            }
         </div>
     )
 }
