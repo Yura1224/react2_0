@@ -1,5 +1,5 @@
 
-export default function Post(props) {
+export default function Post(post) {
     return (
         <div>
                 <ul>

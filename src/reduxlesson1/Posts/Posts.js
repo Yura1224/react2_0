@@ -2,6 +2,8 @@ import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 
 
+
+
 const Posts =  () => {
     let dispatch2 = useDispatch();
     let {posts} = useSelector(state => state);
@@ -18,23 +20,17 @@ const Posts =  () => {
     useEffect(() => {
         fetchPosts()
     }, [])
-    // return (
-    //     <div>
-    //         <button
-    //             onClick={(fetchPosts) => {
-    //                 dispatch2({type: 'Posts of Users'})
-    //             }}
-    //         >
-    //             Posts of Users
-    //
-    //             <ul>
-    //                 {posts.map(post => (
-    //                     <li key={post.id}>{post.title} ==== {post.body}</li>
-    //                 ))}
-    //             </ul>
-    //         </button>
-    //     </div>
-    // )
+    return (
+        <div>
+
+
+                    {posts.map(value => <Post/> (
+                        <li key={post.id}>{post.title} ==== {post.body}</li>
+                    ))}
+
+
+        </div>
+    )
 }
 export default Posts
 
